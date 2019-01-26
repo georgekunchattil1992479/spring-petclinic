@@ -9,5 +9,10 @@ pipeline {
                 git 'https://github.com/georgekunchattil1992479/spring-petclinic.git'
             }
         }
+        stage ('Build') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
     }
 }
